@@ -115,13 +115,13 @@ Linear and angular velocity profiles show smooth transitions and minimal oscilla
 
 ## Final Parameter Set
 
-| Parameter        | Value |
-|------------------|-------|
-| `Kp_linear`      | 1.2   |
-| `Kd_linear`      | 0.15  |
-| `Kp_angular`     | 1.5   |
-| `Kd_angular`     | 0.2   |
-| `spacing`        | 1.0   |
+| Parameter        | Value|
+|------------------|------|
+| `Kp_linear`      | 19   |
+| `Kd_linear`      | 0.4  |
+| `Kp_angular`     | 12   |
+| `Kd_angular`     | 0.01 |
+| `spacing`        | 1.2  |
 
 ---
 
