@@ -29,13 +29,13 @@ The following PD controller parameters were tuned to achieve precise tracking:
 # Final controller parameters
 self.Kp_linear = 19.0   # Proportional gain for linear velocity
 self.Kd_linear = 0.4  # Derivative gain for linear velocity
-self.Kp_angular = 12  # Proportional gain for angular velocity
+self.Kp_angular = 12.0  # Proportional gain for angular velocity
 self.Kd_angular = 0.01  # Derivative gain for angular velocity
 ```
 
 #### Results:
-- **Average Cross-Track Error:** 0.18 units
-- **Maximum Cross-Track Error:** 0.35 units
+- **Average Cross-Track Error:** 0.022 units
+- **Maximum Cross-Track Error:** 0.091 units
 - **Smoothness:** Minimal oscillations and consistent velocity profiles.
 - **Cornering Performance:** Smooth transitions at line endpoints, reducing oversteer and recovery time.
 
@@ -63,7 +63,7 @@ self.spacing = 1.2     # Spacing between lines
 2. **Incremental Adjustments:**
    - Increased `Kp_linear` and `Kp_angular` for more responsive tracking.
    - Tuned `Kd_linear` and `Kd_angular` to reduce oscillations and overshoot.
-   - Monitored effects of each change in real-time using `rqt_plot` and `/cross_track_error`.
+   - Monitored effects of each change in real-time using `rqt_plot` and `/cross_track_error/Data`.
 
 3. **Pattern Refinement:**
    - Adjusted `spacing` to ensure efficient coverage without overlap or gaps.
@@ -92,7 +92,7 @@ self.spacing = 1.2     # Spacing between lines
 ### 2. Trajectory Plot
 The boustrophedon pattern is uniform and precise, with consistent line spacing and smooth transitions at corners.
 
-![Trajectory Plot](images/trajectory_plot.png)
+![Trajectory Plot](https://github.com/TheGodofWar26/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/image.png)
 
 ### 3. Velocity Profiles
 Linear and angular velocity profiles show smooth transitions and minimal oscillations.
