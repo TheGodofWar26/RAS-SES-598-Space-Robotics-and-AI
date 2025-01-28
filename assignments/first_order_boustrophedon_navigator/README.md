@@ -1,4 +1,8 @@
-# First-Order Boustrophedon Navigator
+# Shalom Richard Pakhare
+spakhar1@asu.edu
+ASU ID 1232608015
+
+# Final Output
 ![image](https://github.com/TheGodofWar26/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/image.png)
 
 In this assignment, you will understand the provided code in ROS2 with Turtlesim, and refactor and/or tune the navigator to implement a precise lawnmower survey (a boustrophedon pattern). The current code will do a pattern shown above, which is not a uniform lawnmower survey. 
