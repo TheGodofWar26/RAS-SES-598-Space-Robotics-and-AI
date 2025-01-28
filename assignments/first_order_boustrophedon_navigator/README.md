@@ -4,7 +4,7 @@ ASU ID 1232608015
 
 # Final Output
 ![image](https://github.com/TheGodofWar26/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/image.png)
-[![Watch the video]](https://github.com/TheGodofWar26/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/first_order_boustrophedon_navigator/Screencast%20from%202025-01-27%2023-49-04.webm)
+![Demo Video](https://github.com/TheGodofWar26/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/first_order_boustrophedon_navigator/Screencast%20from%202025-01-27%2023-49-04.webm)
 
 # ROS2 Turtlesim: Implementing a Precise Boustrophedon Pattern
 
