@@ -26,10 +26,10 @@ The following PD controller parameters were tuned to achieve precise tracking:
 
 ```python
 # Final controller parameters
-self.Kp_linear = 1.2   # Proportional gain for linear velocity
-self.Kd_linear = 0.15  # Derivative gain for linear velocity
-self.Kp_angular = 1.5  # Proportional gain for angular velocity
-self.Kd_angular = 0.2  # Derivative gain for angular velocity
+self.Kp_linear = 19.0   # Proportional gain for linear velocity
+self.Kd_linear = 0.4  # Derivative gain for linear velocity
+self.Kp_angular = 12  # Proportional gain for angular velocity
+self.Kd_angular = 0.01  # Derivative gain for angular velocity
 ```
 
 #### Results:
@@ -43,7 +43,7 @@ The boustrophedon pattern was optimized for consistent line spacing and complete
 
 ```python
 # Final pattern parameter
-self.spacing = 1.0     # Spacing between lines
+self.spacing = 1.2     # Spacing between lines
 ```
 
 #### Results:
