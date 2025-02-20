@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Final Output
-
-![image]
-=======
 # Shalom Richard Pakhare
 
 #### spakhar1@asu.edu
@@ -145,7 +140,7 @@ Linear and angular velocity profiles show smooth transitions and minimal oscilla
 ├── src/                      # Source code for the navigator
 ├── launch/                   # ROS2 launch files
 ├── config/                   # Configuration files for parameters
-├── images/                   # Performance plots and metrics
+├── media/                    # Performance plots and metrics
 └── analysis/                 # Performance analysis scripts
 ```
 
@@ -181,7 +176,3 @@ Linear and angular velocity profiles show smooth transitions and minimal oscilla
 
 ## Conclusion
 This project provided hands-on experience in tuning PD controllers, optimizing navigation patterns, and analyzing trajectory tracking performance. By iteratively refining parameters and leveraging ROS2 tools, I was able to achieve precise and efficient boustrophedon navigation. The lessons learned here are directly applicable to real-world robotics applications in space exploration, aerial surveying, and underwater mapping.
-
-
-
->>>>>>> faad789d0f5659ccbab6de21cf7adb21aa293c09
