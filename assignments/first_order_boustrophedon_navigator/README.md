@@ -1,6 +1,7 @@
 # Shalom Richard Pakhare
-spakhar1@asu.edu
-ASU ID 1232608015
+
+#### spakhar1@asu.edu
+#### ASU ID 1232608015
 
 # Final Output
 ![image](https://github.com/TheGodofWar26/RAS-SES-598-Space-Robotics-and-AI/blob/main/assignments/image.png)
@@ -175,5 +176,6 @@ Linear and angular velocity profiles show smooth transitions and minimal oscilla
 
 ## Conclusion
 This project provided hands-on experience in tuning PD controllers, optimizing navigation patterns, and analyzing trajectory tracking performance. By iteratively refining parameters and leveraging ROS2 tools, I was able to achieve precise and efficient boustrophedon navigation. The lessons learned here are directly applicable to real-world robotics applications in space exploration, aerial surveying, and underwater mapping.
+
 
 
