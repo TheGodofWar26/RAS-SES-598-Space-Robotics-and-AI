@@ -5,7 +5,11 @@
 
 # Final Output
 ![image](media/image.png)
+<<<<<<< HEAD
 ![Video](media/video.png)
+=======
+![Video](media/video.webm)
+>>>>>>> 3fc00da68310d2baa8f5e546cb0b59edfa8859be
 
 
 # ROS2 Turtlesim: Implementing a Precise Boustrophedon Pattern
@@ -89,7 +93,7 @@ self.spacing = 1.2     # Spacing between lines
 - **Average:** 0.18 units
 - **Maximum:** 0.35 units
 
-![Cross-Track Error Plot](images/cross_track_error_plot.png)
+![Cross-Track Error Plot](media/initial.png)
 
 ### 2. Trajectory Plot
 The boustrophedon pattern is uniform and precise, with consistent line spacing and smooth transitions at corners.
@@ -140,7 +144,7 @@ Linear and angular velocity profiles show smooth transitions and minimal oscilla
 ├── src/                      # Source code for the navigator
 ├── launch/                   # ROS2 launch files
 ├── config/                   # Configuration files for parameters
-├── images/                   # Performance plots and metrics
+├── media/                    # Performance plots and metrics
 └── analysis/                 # Performance analysis scripts
 ```
 
@@ -176,6 +180,3 @@ Linear and angular velocity profiles show smooth transitions and minimal oscilla
 
 ## Conclusion
 This project provided hands-on experience in tuning PD controllers, optimizing navigation patterns, and analyzing trajectory tracking performance. By iteratively refining parameters and leveraging ROS2 tools, I was able to achieve precise and efficient boustrophedon navigation. The lessons learned here are directly applicable to real-world robotics applications in space exploration, aerial surveying, and underwater mapping.
-
-
-

@@ -22,6 +22,9 @@ class BoustrophedonController(Node):
                 ('Kp_linear', 19.0),
                 ('Kd_linear', 0.4),
                 ('Kp_angular', 12.0),
+                ('Kp_linear', 19.0),
+                ('Kd_linear', 0.4),
+                ('Kp_angular', 12.0),
                 ('Kd_angular', 0.01),
                 ('spacing', 1.2)
             ]
