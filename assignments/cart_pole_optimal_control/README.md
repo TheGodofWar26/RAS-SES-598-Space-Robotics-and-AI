@@ -60,6 +60,7 @@ The disturbance generator was modified to introduce realistic perturbations with
         self.declare_parameter('frequency_range', [0.5, 4.0])  # Frequency range in Hz
         self.declare_parameter('update_rate', 50.0)  # Update rate in Hz
 ```
+![image](assignments/cart_pole_optimal_control/media/Graph1.png)
 
 ## Performance Analysis
 
