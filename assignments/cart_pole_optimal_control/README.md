@@ -4,7 +4,7 @@
 
 #### 1232608015
 
-![video](assignments/cart_pole_optimal_control/media/Demo_Video.webm)
+[![video](assignments/cart_pole_optimal_control/media/Demo_Video.webm)
 
 # Cart-Pole Optimal Control Assignment - Submission Report
 
