@@ -4,7 +4,10 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64
 import numpy as np
+import matplotlib.pyplot as plt
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+from collections import deque
+import threading
 
 class EarthquakeForceGenerator(Node):
     def __init__(self):
@@ -32,7 +35,7 @@ class EarthquakeForceGenerator(Node):
         )
         
         # Parameters for earthquake simulation
-        self.declare_parameter('base_amplitude', 15.0)  # Base force amplitude in N
+        self.declare_parameter('base_amplitude', 100.0)  # Base force amplitude in N
         self.declare_parameter('frequency_range', [0.5, 4.0])  # Frequency range in Hz
         self.declare_parameter('update_rate', 50.0)  # Update rate in Hz
         
@@ -48,7 +51,15 @@ class EarthquakeForceGenerator(Node):
         self.frequencies = np.random.uniform(freq_range[0], freq_range[1], 5)
         self.phase_shifts = np.random.uniform(0, 2*np.pi, 5)
         
+        # Data storage for plotting
+        self.time_data = deque(maxlen=500)
+        self.force_data = deque(maxlen=500)
+        
         self.get_logger().info('Earthquake Force Generator started')
+
+        # Start the plotting thread
+        self.plot_thread = threading.Thread(target=self.plot_force, daemon=True)
+        self.plot_thread.start()
 
     def generate_force(self):
         """Generate earthquake-like force using superposition of sine waves"""
@@ -65,11 +76,35 @@ class EarthquakeForceGenerator(Node):
         # Add some random noise
         force += np.random.normal(0, base_amplitude * 0.1)
         
+        # Store data for plotting
+        self.time_data.append(current_time)
+        self.force_data.append(force)
+        
         # Create and publish the force messages
         msg = Float64()
         msg.data = float(force)
         self.force_publisher.publish(msg)
         self.viz_publisher.publish(msg)  # Publish the same force for visualization
+    
+    def plot_force(self):
+        """Real-time plot of the earthquake force"""
+        plt.ion()
+        fig, ax = plt.subplots()
+        ax.set_title("Earthquake Force Over Time")
+        ax.set_xlabel("Time (s)")
+        ax.set_ylabel("Force (N)")
+        line, = ax.plot([], [], 'b-')
+        
+        while rclpy.ok():
+            if self.time_data:
+                ax.set_xlim(max(0, self.time_data[0] - 1), self.time_data[-1] + 1)
+                line.set_data(self.time_data, self.force_data)
+                ax.relim()
+                ax.autoscale_view()
+                plt.pause(0.05)
+        
+        plt.ioff()
+        plt.show()
 
 def main(args=None):
     rclpy.init(args=args)
@@ -83,4 +118,4 @@ def main(args=None):
         rclpy.shutdown()
 
 if __name__ == '__main__':
-    main() 
+    main()
