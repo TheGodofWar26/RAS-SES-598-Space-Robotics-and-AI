@@ -5,11 +5,10 @@
 
 # Final Output
 ![image](media/image.png)
-<<<<<<< HEAD
 ![Video](media/video.png)
 =======
 ![Video](media/video.webm)
->>>>>>> 3fc00da68310d2baa8f5e546cb0b59edfa8859be
+
 
 
 # ROS2 Turtlesim: Implementing a Precise Boustrophedon Pattern
